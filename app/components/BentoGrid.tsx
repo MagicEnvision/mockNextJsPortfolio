@@ -50,6 +50,24 @@ export const BentoGridItem = ({
         
         background: "linear-gradient(180deg,rgba(15, 15, 15, 1) 0%, rgba(13, 0, 48, 0.98) 50%, rgba(11, 0, 38, 1) 100%)",
       }}>
+        <div className={`${id === 6} && 'flex justify-center h-full' `}>
+          <div className="w-full h-full absolute">
+            {img && (
+              <img 
+              src={img}
+              alt={img}
+              className={cn(imgClassName), 'object-cover, object-center'}/>
+            )}
+          </div>
+          <div className={`abosolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80'}`}>
+            {spareImg && (
+              <img 
+              src={spareImg}
+              alt={spareImg}
+              className={'object-cover object-center w-full'}/>
+            )}
+          </div>
+        </div>
       <div className="transition duration-200 group-hover/bento:translate-x-2">
         <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
           {title}
